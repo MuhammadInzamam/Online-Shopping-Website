@@ -1,0 +1,63 @@
+﻿@model OnlineShoppingStore_2108G1.Models.Category
+
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<main>
+   @using (Html.BeginForm())
+    {
+    <div class="container">
+        <div class="page-title-container">
+            <div class="row g-0">
+                <div class="col-auto mb-3 mb-md-0 me-auto">
+                    <div class="w-auto sw-md-30">
+                        <a href="#" class="muted-link pb-1 d-inline-block breadcrumb-back">
+                            <i data-cs-icon="chevron-left" data-cs-size="13"></i>
+                            <span class="text-small align-middle">Products</span>
+                        </a>
+                        <h1 class="mb-0 pb-0 display-4" id="title">Product Detail</h1>
+                    </div>
+                </div>
+                <div class="w-100 d-md-none"></div>
+
+                <div class="col col-md-auto d-flex align-items-end justify-content-end">
+                    <div class="btn-group ms-1 w-100 w-md-auto">
+                        <button type="submit" class="btn btn-outline-primary btn-icon btn-icon-start w-100">
+                            <i data-cs-icon="send"></i>
+                            <span>Add</span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="mb-5">
+                <h2 class="small-title">Product Info</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Category_Name</label>
+                                @Html.EditorFor(m => m.Category_Name, new { htmlAttributes = new { @class = "form-Control", placeholder = "EnterCategory_Name" } })
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    }
+</main>
+
+
